@@ -20,7 +20,7 @@ int main()
 }
 ```
 
-**Windows**
+**Output (Windows)**
 
 ```
 The thread 0x27a0 has exited with code -1 (0xffffffff).
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-**Output**
+**Output (Windows)**
 
 ```
 1>------ Build started: Project: Exercise_1_7, Configuration: Debug Win32 ------
@@ -144,6 +144,30 @@ int main()
 ```
 
 ## Exercise 1.8
+
+> Indicate which, if any, of the following output statements are legal:
+
+```cpp
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */;
+std::cout << /*  "*/" /*  "/*"  */;
+```
+
+All the other lines except the third one is syntactically correct. The problem with the third line is that the used string ```" */;``` is missing a second quotation mark before the semicolon; Therefore, fixing the problem is rather easy.
+
+```cpp
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */";
+std::cout << /*  "*/" /*  "/*"  */;
+```
+
+**Output (Windows)**
+
+```
+/**/ */ /*  
+```
 
 ## Exercise 1.9
 
