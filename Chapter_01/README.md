@@ -44,7 +44,7 @@ int main()
 
 ## Exercise 1.4
 
-> Our program used the addition operator, *+*, to add two numbers. Write a program that uses the multiplication operator, ***, to print the product instead.
+> Our program used the addition operator, +, to add two numbers. Write a program that uses the multiplication operator, *, to print the product instead.
 
 
 ```cpp
@@ -249,6 +249,17 @@ int main()
 ```
 
 ## Exercise 1.12
+
+> What does the following *for* loop do? What is the final value of *sum*?
+
+```cpp
+int sum = 0;
+
+for (int i = -100; i <= 100; ++i)
+    sum += i;
+```
+
+The *for* loop sums the numbers from *-100* to *100*. Consequently, the final *sum* is *0*.
 
 ## Exercise 1.13
 
