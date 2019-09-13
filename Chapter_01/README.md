@@ -176,17 +176,17 @@ std::cout << /*  "*/" /*  "/*"  */;
 
 int main()
 {
-    int low = 50;
-    int high = 100;
-    int current = low;
+    int min = 50;
+    int max = 100;
+    int current = min;
     int sum = 0;
 
-    while (current <= high) {
+    while (current <= max) {
         sum += current;
         ++current;
     }
 
-    std::cout << "The sum of " << low << " to " << high << " inclusive is " << sum << std::endl;
+    std::cout << "The sum of " << min << " to " << max << " inclusive is " << sum << std::endl;
 
     return 0;
 }
@@ -201,11 +201,11 @@ int main()
 
 int main()
 {
-    int low = 0;
-    int high = 10;
-    int current = high;
+    int min = 0;
+    int max = 10;
+    int current = max;
 
-    while (current >= low) {
+    while (current >= min) {
         std::cout << "Current value is " << current << std::endl;
         --current;
     }
@@ -223,19 +223,20 @@ int main()
 
 int main()
 {
-    int first = 0;
-    std::cout << "Please enter the first number: ";
-    std::cin >> first;
+    int num1 = 0;
+    int num2 = 0;
 
-    int second = 0;
+    std::cout << "Please enter the first number: ";
+    std::cin >> num1;
+
     std::cout << "Please enter the second number: ";
-    std::cin >> second;
+    std::cin >> num2;
 
     // In order for program to handle printing numbers to both directions (e.g. from 1 to 5 and 5 to 1),
-    // we define a variable called `increment` which value is either 1 or -1
-    int increment = first < second ? 1 : -1;
-    int current = first;
-    int last = second + increment;
+    // we define a variable called `increment` which value is either 1 or -1.
+    int increment = num1 < num2 ? 1 : -1;
+    int current = num1;
+    int last = num2 + increment;
 
     while (current != last) {
         std::cout << "Current number is " << current << std::endl;
@@ -270,15 +271,15 @@ The *for* loop sums the numbers from *-100* to *100*. Consequently, the final *s
 
 int main()
 {
-    int low = 50;
-    int high = 100;
+    int min = 50;
+    int max = 100;
     int sum = 0;
 
-    for (int i = low; i <= high; ++i) {
+    for (int i = min; i <= max; ++i) {
         sum += i;
     }
 
-    std::cout << "The sum of " << low << " to " << high << " inclusive is " << sum << std::endl;
+    std::cout << "The sum of " << min << " to " << max << " inclusive is " << sum << std::endl;
 
     return 0;
 }
@@ -291,10 +292,10 @@ int main()
 
 int main()
 {
-    int low = 0;
-    int high = 10;
+    int min = 0;
+    int max = 10;
 
-    for (int i = high; i >= low; --i) {
+    for (int i = max; i >= min; --i) {
         std::cout << "Current value is " << i << std::endl;
     }
 
@@ -412,6 +413,12 @@ int main()
 ```
 
 ## Exercise 1.17
+
+> What happens in the program presented in this section if the input values are all equal? What if there are no duplicated values?
+
+**a)** The program prints how many times given input value occurs but only after the *cin* encounters an error.
+
+**b)** The program prints occurences of all other values except the last one; The last value is printed only after the *cin* encounters an error.
 
 ## Exercise 1.18
 
