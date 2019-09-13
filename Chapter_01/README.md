@@ -29,14 +29,14 @@ The program '[11140] Exercise_1_2.exe' has exited with code -1 (0xffffffff).
 
 ## Exercise 1.3
 
-> Write a program to print *Hello World* on the standard output.
+> Write a program to print *Hello, World* on the standard output.
 
 ```cpp
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World" << std::endl;
+    std::cout << "Hello, World" << std::endl;
 
     return 0;
 }
@@ -52,15 +52,15 @@ int main()
 
 int main()
 {
-    std::cout << "Enter two numbers:" << std::endl;
+    std::cout << "Please enter two numbers: " << std::endl;
 
-    int num1 = 0;
-    int num2 = 0;
+    int first_number = 0;
+    int second_number = 0;
 
-    std::cin >> num1 >> num2;
+    std::cin >> first_number >> second_number;
 
-    std::cout << "The product of " << num1 << " and " << num2 << " is: " << (num1 * num2) 
-        << std::endl;
+    std::cout << "The product of " << first_number << " and " << second_number 
+        << " is " << (first_number * second_number) << std::endl;
 
     return 0;
 }
@@ -75,19 +75,19 @@ int main()
 
 int main()
 {
-    std::cout << "Enter two numbers:" << std::endl;
+    std::cout << "Please enter two numbers: " << std::endl;
 
-    int num1 = 0;
-    int num2 = 0;
+    int first_number = 0;
+    int second_number = 0;
 
-    std::cin >> num1 >> num2;
+    std::cin >> first_number >> second_number;
 
     std::cout << "The product of ";
-    std::cout << num1;
+    std::cout << first_number;
     std::cout << " and ";
-    std::cout << num2;
-    std::cout << " is: ";
-    std::cout << (num1 * num2);
+    std::cout << second_number;
+    std::cout << " is ";
+    std::cout << (first_number * second_number);
     std::cout << std::endl;
 
     return 0;
@@ -100,16 +100,16 @@ int main()
 
 ```cpp
 std::cout << "The sum of " << v1;
-	  << " and " << v2;
-	  << " is " << v1 + v2 << std::endl;
+          << " and " << v2;
+          << " is " << v1 + v2 << std::endl;
 ```
 
 The program is illegal because a semicolon at the end of *v1;* and *v2;* stops the chaining of more values to the *ostream* object, named as *std::cout*. The fixed version of the code would look like the following.
 
 ```cpp
 std::cout << "The sum of " << v1
-	  << " and " << v2 
-	  << " is " << v1 + v2 << std::endl;
+          << " and " << v2
+          << " is " << v1 + v2 << std::endl;
 ```
 
 ## Exercise 1.7
@@ -178,17 +178,17 @@ std::cout << /*  "*/" /*  "/*"  */;
 
 int main()
 {
-    int low  = 50;
+    int low = 50;
     int high = 100;
-    int val  = low;
-    int sum  = 0;
-    
-    while (val <= high) {
-        sum += val;
-        ++val;
+    int current = low;
+    int sum = 0;
+
+    while (current <= high) {
+        sum += current;
+        ++current;
     }
 
-    std::cout << "The sum of " << low << " to " << high << " inclusive is: " << sum << std::endl;
+    std::cout << "The sum of " << low << " to " << high << " inclusive is " << sum << std::endl;
 
     return 0;
 }
@@ -196,20 +196,20 @@ int main()
 
 ## Exercise 1.10
 
-> In addition to the ++ operator that adds 1 to its operand, there is a decrement operator (--) that subtracts 1. use the decrement operator to write a *while* that prints the numbers from ten down to *zero*.
+> In addition to the ++ operator that adds 1 to its operand, there is a decrement operator (--) that subtracts 1. Use the decrement operator to write a *while* that prints the numbers from ten down to *zero*.
 
 ```cpp
 #include <iostream>
 
 int main()
 {
-    int low  = 0;
+    int low = 0;
     int high = 10;
-    int val  = high;
-    
-    while (val >= low) {
-        std::cout << "Current value is: " << val << std::endl;
-        --val;
+    int current = high;
+
+    while (current >= low) {
+        std::cout << "Current value is " << current << std::endl;
+        --current;
     }
 
     return 0;
@@ -217,6 +217,36 @@ int main()
 ```
 
 ## Exercise 1.11
+
+> Write a program that prompts the user for two integers. Print each number in the range specified by those two integers.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int first_number = 0;
+    std::cout << "Please enter first number: ";
+    std::cin >> first_number;
+
+    int second_number = 0;
+    std::cout << "Please enter second number: ";
+    std::cin >> second_number;
+
+    // In order for program to handle printing numbers to both directions (e.g. from 1 to 5 and 5 to 1),
+    // we define a variable called `increment` which value is either 1 or -1
+    int increment = first_number < second_number ? 1 : -1;
+    int current = first_number;
+    int last = second_number + increment;
+
+    while (current != last) {
+        std::cout << "Current number is " << current << std::endl;
+        current += increment;
+    }
+
+    return 0;
+}
+```
 
 ## Exercise 1.12
 
