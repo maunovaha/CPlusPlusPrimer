@@ -306,6 +306,10 @@ int main()
 
 ## Exercise 1.14
 
+> Compare and contrast the loops that used a *for* with those using a *while*. Are there advantages or disadvantages to using either form?
+
+I would use *for* loops in both of the cases because it makes it easier to use variable in a condition and increment that variable with a single line of code. Of course, this is also probably just matter of personal preference.
+
 ## Exercise 1.15
 
 ## Exercise 1.16
