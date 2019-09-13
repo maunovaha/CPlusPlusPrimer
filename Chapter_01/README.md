@@ -414,13 +414,48 @@ int main()
 
 ## Exercise 1.17
 
-> What happens in the program presented in this section if the input values are all equal? What if there are no duplicated values?
+> **_a)_** What happens in the program presented in this section if the input values are all equal? **_b)_** What if there are no duplicated values?
 
-**a)** The program prints how many times given input value occurs but only after the *cin* encounters an error.
+```cpp
+#include <iostream>
 
-**b)** The program prints occurences of all other values except the last one; The last value is printed only after the *cin* encounters an error.
+int main()
+{
+    int previous = 0;
+
+    if (std::cin >> previous) {
+        int replicas = 1;
+        int current = 0;
+
+        while (std::cin >> current) {
+            if (current == previous) {
+                ++replicas;
+            }
+            else {
+                std::cout << previous << " occurs " << replicas << " times" << std::endl;
+                previous = current;
+                replicas = 1;
+            }
+        }
+
+        std::cout << previous << " occurs " << replicas << " times" << std::endl;
+    }
+
+    return 0;
+}
+```
+
+**_a)_** The program prints how many times given input value occurs but only after the *cin* encounters an error.
+
+**_b)_** The program prints occurences of all other values except the last one; The last value is printed only after the *cin* encounters an error.
 
 ## Exercise 1.18
+
+> Compile and run the program from this section giving it only equal values as input. Run it again giving it values in which no number is repeated.
+
+**Output #1 and #2**
+
+Works as already described.
 
 ## Exercise 1.19
 
