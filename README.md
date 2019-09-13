@@ -6,7 +6,7 @@ Consequently, I have tried my best to do the following:
 
 1. Every exercise solution on purpose avoids using C++ language concepts which are not introduced in preceding chapters of the book.
 
-2. Some of the example code provided by the book is modified to use more consistent variable naming and syntax.
+2. Some of the example code provided by the book is modified to use better variable naming and syntax.
 
 ## Used software / environment
 
