@@ -44,7 +44,7 @@ int main()
 
 ## Exercise 1.4
 
-> Our program used the addition operator, +, to add two numbers. Write a program that uses the multiplication operator, *, to print the product instead.
+> Our program used the addition operator, *+*, to add two numbers. Write a program that uses the multiplication operator, ***, to print the product instead.
 
 
 ```cpp
@@ -183,8 +183,7 @@ int main()
     int val  = low;
     int sum  = 0;
     
-    while (val <= high)
-    {
+    while (val <= high) {
         sum += val;
         ++val;
     }
@@ -196,6 +195,26 @@ int main()
 ```
 
 ## Exercise 1.10
+
+> In addition to the ++ operator that adds 1 to its operand, there is a decrement operator (--) that subtracts 1. use the decrement operator to write a *while* that prints the numbers from ten down to *zero*.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int low  = 0;
+    int high = 10;
+    int val  = high;
+    
+    while (val >= low) {
+        std::cout << "Current value is: " << val << std::endl;
+        --val;
+    }
+
+    return 0;
+}
+```
 
 ## Exercise 1.11
 
