@@ -313,7 +313,7 @@ I would use *for* loops in both of the cases because it makes it easier to use v
 
 > Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
 
-**Syntax error**
+### Example: Syntax error
 
 ```cpp
 #include <iostream>
@@ -326,7 +326,7 @@ int main()
 }
 ```
 
-Output (Windows)
+**Output (Windows)**
 
 ```
 1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
@@ -339,7 +339,7 @@ Output (Windows)
 ========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-**Type error**
+### Example: Type error
 
 ```cpp
 #include <iostream>
@@ -352,7 +352,7 @@ int main()
 }
 ```
 
-Output (Windows)
+**Output (Windows)**
 
 ```
 1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
@@ -363,7 +363,7 @@ Output (Windows)
 ========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-**Declaration error**
+### Example: Declaration error
 
 ```cpp
 #include <iostream>
@@ -374,7 +374,7 @@ int main()
 }
 ```
 
-Output (Windows)
+**Output (Windows)**
 
 ```
 1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
