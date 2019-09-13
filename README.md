@@ -16,7 +16,7 @@ Consequently, I have tried my best to do the following:
 
 ## Table of contents
 
-- [Chapter 1. Getting Started](Chapter_1/README.md)
+- [Chapter 1. Getting Started](Chapter_01/README.md)
 - Part I: The Basics
   - Chapter 2. Variables and Basic Types
   - Chapter 3. Strings, Vectors, and Arrays
