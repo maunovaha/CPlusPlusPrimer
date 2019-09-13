@@ -133,14 +133,13 @@ int main()
 ```
 1>------ Build started: Project: Exercise_1_7, Configuration: Debug Win32 ------
 1>Main.cpp
-1>D:\...\Exercise_1_7\Source\Main.cpp(2,35): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
-1>D:\...\Exercise_1_7\Source\Main.cpp(2,31): error C2146:  syntax error: missing ';' before identifier 'nest'
-1>D:\...\Exercise_1_7\Source\Main.cpp(5,2): warning C4138:  '*/' found outside of comment
-1>D:\...\Exercise_1_7\Source\Main.cpp(7,1): error C2143:  syntax error: missing ';' before '{'
-1>D:\...\Exercise_1_7\Source\Main.cpp(7,1): error C2447:  '{': missing function header (old-style formal list?)
+1>D:\...\Source\Main.cpp(2,35): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+1>D:\...\Source\Main.cpp(2,31): error C2146:  syntax error: missing ';' before identifier 'nest'
+1>D:\...\Source\Main.cpp(5,2): warning C4138:  '*/' found outside of comment
+1>D:\...\Source\Main.cpp(7,1): error C2143:  syntax error: missing ';' before '{'
+1>D:\...\Source\Main.cpp(7,1): error C2447:  '{': missing function header (old-style formal list?)
 1>Done building project "Exercise_1_7.vcxproj" -- FAILED.
 ========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
-
 ```
 
 ## Exercise 1.8
@@ -311,6 +310,79 @@ int main()
 I would use *for* loops in both of the cases because it makes it easier to use variable in a condition and increment that variable with a single line of code. Of course, this is also probably just matter of personal preference.
 
 ## Exercise 1.15
+
+> Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
+
+**Syntax error**
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, World" < std::endl; // Error: Missing second `<` after "Hello, World"
+
+    return 0;
+}
+```
+
+Output (Windows)
+
+```
+1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
+1>Main.cpp
+1>D:\...\Source\Main.cpp(5,44): error C2678:  binary '<': no operator found which takes a left-hand operand of type 'std::basic_ostream<char,std::char_traits<char>>' (or there is no acceptable conversion)
+1>D:\...\MSVC\14.21.27702\include\system_error(259,24): message :  could be 'bool std::operator <(const std::error_code &,const std::error_code &) noexcept' [found using argument-dependent lookup]
+1>D:\...\MSVC\14.21.27702\include\system_error(264,24): message :  or       'bool std::operator <(const std::error_condition &,const std::error_condition &) noexcept' [found using argument-dependent lookup]
+1>D:\...\Source\Main.cpp(5,44): message :  while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, overloaded-function)'
+1>Done building project "Exercise_1_15.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+```
+
+**Type error**
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::string age = 30; // Error: Trying to assing number to string
+
+    return 0;
+}
+```
+
+Output (Windows)
+
+```
+1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
+1>Main.cpp
+1>D:\...\Source\Main.cpp(5,25): error C2440:  'initializing': cannot convert from 'int' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+1>D:\...\Source\Main.cpp(5,25): message :  No constructor could take the source type, or constructor overload resolution was ambiguous
+1>Done building project "Exercise_1_15.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+```
+
+**Declaration error**
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    cout << "Hello, World" << std::endl; // Error: There should be namespace `std::` in front of `cout`
+}
+```
+
+Output (Windows)
+
+```
+1>------ Build started: Project: Exercise_1_15, Configuration: Debug Win32 ------
+1>Main.cpp
+1>D:\...\Source\Main.cpp(5,5): error C2065:  'cout': undeclared identifier
+1>Done building project "Exercise_1_15.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+```
 
 ## Exercise 1.16
 
