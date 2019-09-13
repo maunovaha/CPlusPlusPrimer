@@ -453,9 +453,7 @@ int main()
 
 > Compile and run the program from this section giving it only equal values as input. Run it again giving it values in which no number is repeated.
 
-**Output #1 and #2**
-
-Works as already described.
+Works as [already described in Exercise 1.17](#exercise-117).
 
 ## Exercise 1.19
 
