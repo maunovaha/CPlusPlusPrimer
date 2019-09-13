@@ -54,13 +54,12 @@ int main()
 {
     std::cout << "Please enter two numbers: " << std::endl;
 
-    int first_number = 0;
-    int second_number = 0;
+    int num1 = 0;
+    int num2 = 0;
 
-    std::cin >> first_number >> second_number;
+    std::cin >> num1 >> num2;
 
-    std::cout << "The product of " << first_number << " and " << second_number 
-        << " is " << (first_number * second_number) << std::endl;
+    std::cout << "The product of " << num1 << " and " << num2 << " is " << (num1 * num2) << std::endl;
 
     return 0;
 }
@@ -77,17 +76,17 @@ int main()
 {
     std::cout << "Please enter two numbers: " << std::endl;
 
-    int first_number = 0;
-    int second_number = 0;
+    int num1 = 0;
+    int num2 = 0;
 
-    std::cin >> first_number >> second_number;
+    std::cin >> num1 >> num2;
 
     std::cout << "The product of ";
-    std::cout << first_number;
+    std::cout << num1;
     std::cout << " and ";
-    std::cout << second_number;
+    std::cout << num2;
     std::cout << " is ";
-    std::cout << (first_number * second_number);
+    std::cout << (num1 * num2);
     std::cout << std::endl;
 
     return 0;
@@ -224,19 +223,19 @@ int main()
 
 int main()
 {
-    int first_number = 0;
+    int first = 0;
     std::cout << "Please enter the first number: ";
-    std::cin >> first_number;
+    std::cin >> first;
 
-    int second_number = 0;
+    int second = 0;
     std::cout << "Please enter the second number: ";
-    std::cin >> second_number;
+    std::cin >> second;
 
     // In order for program to handle printing numbers to both directions (e.g. from 1 to 5 and 5 to 1),
     // we define a variable called `increment` which value is either 1 or -1
-    int increment = first_number < second_number ? 1 : -1;
-    int current = first_number;
-    int last = second_number + increment;
+    int increment = first < second ? 1 : -1;
+    int current = first;
+    int last = second + increment;
 
     while (current != last) {
         std::cout << "Current number is " << current << std::endl;
@@ -371,6 +370,8 @@ int main()
 int main()
 {
     cout << "Hello, World" << std::endl; // Error: There should be namespace `std::` in front of `cout`
+
+    return 0;
 }
 ```
 
@@ -385,6 +386,30 @@ int main()
 ```
 
 ## Exercise 1.16
+
+> Write your own version of a program that prints the sum of a set of integers read from *cin*.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int sum = 0;
+    int user_input = 0;
+    
+    do {
+        std::cout << "Enter a number: ";
+        std::cin >> user_input;
+
+        sum += user_input;
+    }
+    while (!std::cin.fail());
+
+    std::cout << "The sum is: " << sum << std::endl;
+
+    return 0;
+}
+```
 
 ## Exercise 1.17
 
