@@ -226,11 +226,11 @@ int main()
 int main()
 {
     int first_number = 0;
-    std::cout << "Please enter first number: ";
+    std::cout << "Please enter the first number: ";
     std::cin >> first_number;
 
     int second_number = 0;
-    std::cout << "Please enter second number: ";
+    std::cout << "Please enter the second number: ";
     std::cin >> second_number;
 
     // In order for program to handle printing numbers to both directions (e.g. from 1 to 5 and 5 to 1),
@@ -259,9 +259,50 @@ for (int i = -100; i <= 100; ++i)
     sum += i;
 ```
 
-The *for* loop sums the numbers from *-100* to *100*. Consequently, the final *sum* is *0*.
+The *for* loop sums the numbers from *-100* to *100*. Consequently, the final *sum* is *zero*.
 
 ## Exercise 1.13
+
+>  Rewrite the first two exercises from § 1.4.1 (p. 13) using *for* loops.
+
+**Ex1.9** using *for* loop:
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int low = 50;
+    int high = 100;
+    int sum = 0;
+
+    for (int i = low; i <= high; ++i) {
+        sum += i;
+    }
+
+    std::cout << "The sum of " << low << " to " << high << " inclusive is " << sum << std::endl;
+
+    return 0;
+}
+```
+
+**Ex1.10** using *for* loop:
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int low = 0;
+    int high = 10;
+
+    for (int i = high; i >= low; --i) {
+        std::cout << "Current value is " << i << std::endl;
+    }
+
+    return 0;
+}
+```
 
 ## Exercise 1.14
 
