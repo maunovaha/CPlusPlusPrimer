@@ -154,7 +154,7 @@ std::cout << /* "*/" */;
 std::cout << /*  "*/" /*  "/*"  */;
 ```
 
-All the other lines except the third one is syntactically correct. The problem with the third line is that the used string ```" */;``` is missing a second quotation mark before the semicolon; Therefore, fixing the problem is rather easy.
+All the other lines except the third one is syntactically correct. The problem with the third line is that the used string ```/* "*/" */;``` is missing a second quotation mark before the semicolon; Therefore, fixing the problem is rather easy.
 
 ```cpp
 std::cout << "/*";
@@ -163,13 +163,37 @@ std::cout << /* "*/" */";
 std::cout << /*  "*/" /*  "/*"  */;
 ```
 
-**Output (Windows)**
+**Output**
 
 ```
 /**/ */ /*  
 ```
 
 ## Exercise 1.9
+
+> Write a program that uses a *while* to sum the numbers from 50 to 100.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int low  = 50;
+    int high = 100;
+    int val  = low;
+    int sum  = 0;
+    
+    while (val <= high)
+    {
+        sum += val;
+        ++val;
+    }
+
+    std::cout << "The sum of " << low << " to " << high << " inclusive is: " << sum << std::endl;
+
+    return 0;
+}
+```
 
 ## Exercise 1.10
 
