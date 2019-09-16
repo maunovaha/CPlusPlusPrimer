@@ -58,15 +58,14 @@ public:
     std::string isbn() const { return book_no_; };
     double avg_price() const;
 
-    // These declarations are explained in section 7.2.1, p. 270 and in chapter 14, 
+    // These declarations are explained in section 7.2.1, p. 270 and in chapter 14,
     // pages 557, 558, 561
     friend std::istream& operator>>(std::istream& in, Sales_item& s);
     friend std::ostream& operator<<(std::ostream& os, const Sales_item& s);
     friend bool operator<(const Sales_item& lhs, const Sales_item& rhs);
     friend bool operator==(const Sales_item& lhs, const Sales_item& rhs);
-
 private:
-    std::string book_no_;    // Implicitly initialized to the empty string
+    std::string book_no_;     // Implicitly initialized to the empty string
     unsigned units_sold_ = 0; // Explicitly initialized
     double revenue_ = 0.0;
 };
@@ -140,7 +139,7 @@ double Sales_item::avg_price() const
     if (units_sold_) {
         return revenue_ / units_sold_;
     }
-    
+
     return 0;
 }
 
