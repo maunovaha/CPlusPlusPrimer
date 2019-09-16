@@ -118,7 +118,7 @@ std::cout << "The sum of " << v1
 ```cpp
 /*
  * Comment pairs /* */ cannot nest.
- * "cannot nest" is considered source code, 
+ * "cannot nest" is considered source code,
  * as is the rest of the program
  */
 int main()
@@ -164,7 +164,7 @@ std::cout << /*  "*/" /*  "/*"  */;
 **Output**
 
 ```
-/**/ */ /*  
+/**/ */ /*
 ```
 
 ## Exercise 1.9
@@ -397,7 +397,7 @@ int main()
 {
     int sum = 0;
     int user_input = 0;
-    
+
     do {
         std::cout << "Enter a number: ";
         std::cin >> user_input;
@@ -468,6 +468,10 @@ The solution [presented in Exercise 1.11](#exercise-111) already handled this ca
 The solution can be found [here](Exercise_1_20/).
 
 ## Exercise 1.21
+
+> Write a program that reads two *Sales_item* objects that have the same *ISBN* and produces their sum.
+
+The solution can be found [here](Exercise_1_21/).
 
 ## Exercise 1.22
 
