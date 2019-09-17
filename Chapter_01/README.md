@@ -492,3 +492,7 @@ The solution can be found [here](Exercise_1_23/).
 The solution [presented in Exercise 1.23](#exercise-123) works as expected.
 
 ## Exercise 1.25
+
+> Using the *Sales_item.h* header from the Web site, compile and execute the bookstore program presented in this section.
+
+The solution [presented in Exercise 1.22](#exercise-122) works the same.

@@ -26,6 +26,10 @@ int main()
 
         std::cout << "Stored a transaction: " << previous << std::endl;
     }
+    else {
+        std::cout << "\nNo data?!" << std::endl;
+        return -1;
+    }
 
     return 0;
 }

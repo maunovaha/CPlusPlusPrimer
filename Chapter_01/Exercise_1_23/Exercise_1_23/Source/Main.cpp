@@ -28,6 +28,10 @@ int main()
 
         std::cout << previous << " occurs " << replicas << " times" << std::endl;
     }
+    else {
+        std::cout << "\nNo data?!" << std::endl;
+        return -1;
+    }
 
     return 0;
 }

@@ -15,10 +15,11 @@ int main()
 
     if (book1.isbn() == book2.isbn()) {
         std::cout << "The sum is: " << (book1 + book2) << std::endl;
-        return 0;
     }
     else {
         std::cerr << "Error: The given books had different ISBNs!" << std::endl;
         return -1;
     }
+
+    return 0;
 }
