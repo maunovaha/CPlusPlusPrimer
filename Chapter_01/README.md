@@ -475,6 +475,10 @@ The solution can be found [here](Exercise_1_21/).
 
 ## Exercise 1.22
 
+> Write a program that reads several transactions for the same *ISBN*. Write the sum of all the transactions that were read.
+
+The solution can be found [here](Exercise_1_22/).
+
 ## Exercise 1.23
 
 ## Exercise 1.24

@@ -13,11 +13,12 @@ int main()
 
     std::cin >> book1 >> book2;
 
-    if (book1.isbn() != book2.isbn()) {
-      std::cerr << "Error: The given books had different ISBNs!" << std::endl;
-      return -1;
+    if (book1.isbn() == book2.isbn()) {
+        std::cout << "The sum is: " << (book1 + book2) << std::endl;
+        return 0;
     }
-
-    std::cout << "The sum is: " << (book1 + book2) << std::endl;
-    return 0;
+    else {
+        std::cerr << "Error: The given books had different ISBNs!" << std::endl;
+        return -1;
+    }
 }
