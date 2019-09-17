@@ -481,6 +481,10 @@ The solution can be found [here](Exercise_1_22/).
 
 ## Exercise 1.23
 
+> Write a program that reads several transactions and counts how many transactions occurs for each *ISBN*.
+
+The solution can be found [here](Exercise_1_23/).
+
 ## Exercise 1.24
 
 ## Exercise 1.25
