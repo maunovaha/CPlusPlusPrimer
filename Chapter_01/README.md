@@ -487,4 +487,8 @@ The solution can be found [here](Exercise_1_23/).
 
 ## Exercise 1.24
 
+> Test the previous program by giving multiple transactions representing multiple *ISBNs*. The records for each *ISBN* should be grouped together.
+
+The solution [presented in Exercise 1.23](#exercise-123) works as expected.
+
 ## Exercise 1.25
