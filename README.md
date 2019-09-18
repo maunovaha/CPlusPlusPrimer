@@ -18,7 +18,7 @@ Consequently, I have tried my best to do the following:
 
 - [Chapter 1. Getting Started](Chapter_01/README.md)
 - Part I: The Basics
-  - Chapter 2. Variables and Basic Types
+  - [Chapter 2. Variables and Basic Types](Chapter_02/README.md)
   - Chapter 3. Strings, Vectors, and Arrays
   - Chapter 4. Expressions
   - Chapter 5. Statements
