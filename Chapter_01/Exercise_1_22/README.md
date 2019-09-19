@@ -4,7 +4,7 @@ This program does not work properly when it is run on Windows. I suspect that th
 
 ```cpp
 while (std::cin >> current) {
-	// ...
+    // ...
 }
 
 std::cout << "Stored a transaction: " << previous << std::endl; // <-- This line is not outputted properly

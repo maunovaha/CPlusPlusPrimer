@@ -4,7 +4,7 @@ This program does not work properly when it is run on Windows. I suspect that th
 
 ```cpp
 while (std::cin >> current) {
-	// ...
+    // ...
 }
 
 std::cout << previous << " occurs " << replicas << " times" << std::endl; // <-- This line is not outputted properly
