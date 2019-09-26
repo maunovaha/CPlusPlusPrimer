@@ -1,6 +1,6 @@
 # C++ Primer (5th Edition) - Exercise solutions
 
-This repository contains my personal solutions to exercises presented in the [C++ Primer (5th Edition)](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113). These solutions are on purpose written in easy to understand manner so that the beginners - like me - are able to learn the C++ language with their own pace.
+This repository contains my own solutions to exercises presented in the [C++ Primer (5th Edition)](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113). These solutions are on purpose written in easy to understand manner so that the beginners - like me - are able to learn the C++ language with their own pace.
 
 Consequently, I have tried my best to do the following:
 
